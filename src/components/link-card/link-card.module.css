@@ -1,0 +1,61 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.cell {
+    position: relative;
+    margin: 0;
+    width: 400px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid white;
+}
+
+.copyLogo {
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.copyLogo:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.link {
+    margin: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid white;
+    word-wrap: break-word;
+}
+
+.linkFull {
+    width: 500px;
+}
+
+.linkShort {
+    word-wrap: break-word;
+    padding-right: 30px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.linkCounter {
+    width: 200px;
+    font-size: 16px;
+}

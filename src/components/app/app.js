@@ -5,6 +5,7 @@ import appStyles from './app.module.css';
 
 import Register from "../../pages/register/register";
 import Login from "../../pages/login/login";
+import MainPage from "../../pages/main/main";
 
 function App() {  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,7 +14,7 @@ function App() {
     <Routes>
       {/* главная */}
       <Route path="/"
-
+        element={ <MainPage /> }
       />
 
       {/* логин */}

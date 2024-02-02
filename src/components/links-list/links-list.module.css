@@ -1,0 +1,41 @@
+.section {
+    display: grid;
+    grid-template-areas: 
+        "full short count"
+        "card"
+    ;
+}
+
+.list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.titles {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.title {
+    margin: 0;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    border-right: 1px solid white;
+}
+
+.titleFull {
+    width: 500px;
+}
+
+.titleShort {
+    width: 400px;
+}
+
+.titleCounter {
+    width: 200px;
+}
