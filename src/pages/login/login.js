@@ -20,7 +20,7 @@ function Login({setIsLoggedIn}) {
         evt.preventDefault();
         mainApi.login(loginData)
             .then((res) => {
-                localStorage.setItem('token', res.access_token);
+                localStorage.setItem('jwt', res.access_token);
                 setLoginData({username: '', password: ''});
                 setIsLoggedIn(true);
                 navigate('/', {replace: true});
