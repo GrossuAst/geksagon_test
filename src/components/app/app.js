@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-
-import appStyles from './app.module.css';
+import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 import { shorterApi } from "../../utils/shorter-api";
 
@@ -10,7 +8,8 @@ import Login from "../../pages/login/login";
 import MainPage from "../../pages/main/main";
 
 function App() {
-  // const location = useLocation();
+  const navigate = useNavigate();
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [initialData, setInitialData] = useState([]);
 
@@ -25,17 +24,19 @@ function App() {
           console.log(err);
         })  
     }
-    return
   }, [isLoggedIn]);
   
-  // useEffect(() => {
-  //   checkToken()
-  // });
-
-  // function checkToken() {
-  //   const token = localStorage.getItem('jwt');
-  //   return token;
-  // };
+  useEffect(() => {
+    const token = localStorage.getItem('jwt');
+    token && 
+    shorterApi.getData(token)
+      .then((res) => {
+        setIsLoggedIn(true);
+        setInitialData(res);
+        navigate('/', {replace: true});
+        console.log(res)
+      })
+  }, []);
 
   return (
     <Routes>
@@ -47,6 +48,7 @@ function App() {
             isLoggedIn={ isLoggedIn }
             initialData={ initialData }
             setInitialData={ setInitialData }
+            setIsLoggedIn={ setIsLoggedIn }
           /> : 
           <Navigate to='/login' replace />
         }

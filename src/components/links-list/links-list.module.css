@@ -10,6 +10,27 @@
 .filters {
     height: 150px;
     width: 1100px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-bottom: 1px solid #424242;
+}
+
+.label {
+    color: white;
+}
+
+.button {
+    height: 30px;
+    width: 150px;
+}
+
+.radioContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .mainTitle {

@@ -2,3 +2,42 @@
     margin: 0 auto;
     max-width: max-content;
 }
+
+.header {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100px;
+    max-width: 1100px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100px;
+    max-width: 1100px;
+}
+
+.title {
+    color: white;
+}
+
+.logoutButton {
+    margin-top: auto;
+    background-color: #8B8B8B;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.logoutButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}

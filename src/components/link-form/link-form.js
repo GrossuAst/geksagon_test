@@ -16,7 +16,7 @@ function LinkForm({isLoggedIn, initialData, setInitialData}) {
       shorterApi.generateLink(formValue, token)
         .then((res) => {
           setInitialData([...initialData, res]);
-          console.log(res)
+          // console.log(res)
         })
         .catch((err) => {
           console.log(err)

@@ -34,7 +34,20 @@ export class ShorterApi {
             },
         })
         .then(this._checkResponse)
+    };
+
+    sortData(token, order, limit ) {
+        return fetch(`${BASE_URL}/statistics?order=${order}&offset=0&limit=${limit}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+                "Accept": "application/json",
+            }
+        })
+        .then(this._checkResponse)
     }
+
 }
 
 export const shorterApi = new ShorterApi();
